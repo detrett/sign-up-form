@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>24 Bottles | A Sign Up Form Project</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=abhaya-libre:400,500,600,700,800" rel="stylesheet" />
@@ -16,59 +16,77 @@
             <img id="hero" src="images/hero.jpg"
                 alt="A woman pouring wine from a bottle into a wine glass, with a blurred wedding party visible in the background.">
             <div id="hero-banner">
-                <img id="logo" src="images/logo.png" 
-                alt="Logo of the fake company 24 Bottles, made up of a bottle of wine and two glasses of wine">
+                <img id="logo" src="images/logo.png"
+                    alt="Logo of the fake company 24 Bottles, made up of a bottle of wine and two glasses of wine">
                 <h1 id="company">24 Bottles</h1>
+            </div>
+            <div id="credit">
+                Image by <a target="_blank"
+                    href="https://pixabay.com/users/max_dormann-40441792/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8949009">Max</a>
+                from <a target="_blank"
+                    href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8949009">Pixabay</a>
             </div>
         </div>
         <div id="main-container">
             <div id="description">
                 <h2>Join the 24 Bottles Family!</h2>
                 <p>Ready to elevate your events with exquisite catering that’s always a hit?</p>
-                <p>At 24 Bottles, we specialize in crafting unforgettable experiences for weddings with our diverse and delicious menu options.</p>
+                <p>At 24 Bottles, we specialize in crafting unforgettable experiences for weddings with our diverse and
+                    delicious menu options.</p>
                 <p>Sign up now to gain exclusive access to all of our services. </p>
             </div>
             <div id="form-container">
-                <form action="" method="get" class="sign-up-form">
+                <form action="" method="get" id="sign-up-form">
                     <legend>Don't miss out on the chance to make your next event truly special.</legend>
                     <div class="form-row">
                         <div class="form-column">
-                            <label for="first-name">First Name</label>
-                            <input id="first-name" name="first-name" type="text"/>
+                            <label for="first-name">*First Name</label>
+                            <input required minlength="3" maxlength="20" id="first-name" name="first-name"
+                                type="text" />
                         </div>
                         <div class="form-column">
-                            <label for="last-name">Last Name</label>
-                            <input id="last-name" name="last-name" type="text"/>
+                            <label for="last-name">*Last Name</label>
+                            <input required minlength="3" maxlength="30" id="last-name" name="last-name" type="text" />
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-column">
-                            <label for="email">Email</label>
-                            <input id="email" name="email" type="email"/>
+                            <label for="email">*Email</label>
+                            <input required id="email" name="email" type="email" />
                         </div>
                         <div class="form-column">
                             <label for="telephone">Phone Number</label>
-                            <input id="telephone" name="telephone" type="tel"/>
+                            <input id="telephone" name="telephone" type="tel" pattern="^[49]\d{7}$"
+                                oninvalid="setCustomValidity('Phone number must be eight characters long and begin with a 4 or a 9')"
+                                oninput="setCustomValidity('')" />
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-column">
-                            <label for="password">Password</label>
-                            <input id="password" name="password" type="password"/>
+                            <label for="password">*Password</label>
+                            <input required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" id="password"
+                                name="password" type="password"
+                                oninvalid="setCustomValidity('Minimum eight characters, at least one letter and one number')"
+                                oninput="setCustomValidity('')" />
                         </div>
                         <div class="form-column">
-                            <label for="password-repeat">Repeat Password</label>
-                            <input id="password-repeat" name="password" type="password"/>
+                            <label for="password-repeat">*Repeat Password</label>
+                            <input required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" id="password-repeat"
+                                name="password-repeat" type="password"
+                                oninvalid="setCustomValidity('Minimum eight characters, at least one letter and one number')"
+                                oninput="setCustomValidity('')" />
                         </div>
                     </div>
                 </form>
             </div>
             <div id="footer">
                 <div class="button-container">
-                    <button id="sign-up-btn">Create Account</button>
-                    <button id="github-btn">
-                        <img src="images/github.svg" alt="Github icon">
-                        Detrett</button>
+                    <input id="sign-up-btn" type="submit" form="sign-up-form" value="Create Account"></input>
+                    <a href="https://github.com/detrett/sign-up-form" target="_blank">
+                        <button id="github-btn">
+                            <img src="images/github.svg" alt="Github icon">
+                            Detrett</button>
+                    </a>
                 </div>
                 <p>Already have an account? <a id="log-in" href="#">Log in</a></p>
             </div>

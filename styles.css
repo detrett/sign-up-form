@@ -103,6 +103,9 @@ textarea:not([rows]) {
 body {
     background-color: var(--champagne);
     margin: 0;
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 500;
+    color: #283618;
 }
 
 #container {
@@ -143,7 +146,6 @@ body {
         }
 
         & #company {
-            font-family: 'Abhaya Libre', serif;
             font-size: 5em;
             font-weight: 900;
             margin-block-start: -1.5rem;
@@ -153,14 +155,115 @@ body {
 }
 
 #main-container {
+    margin-top: 1.75%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+#description {
+    width: 75ch;
+}
+
+#description h2 {
+    font-size: 2.5em;
+    margin-bottom: 5%;
+}
+
+#description p {
+    font-size: 1.25em;
+    margin-top: 4px;
+}
+
+#description p:last-child {
+    font-size: 1.25em;
+    font-weight: 800;
+    margin-top: 5%;
+    margin-bottom: 48px;
 }
 
 #form-container {
-    background-color: #DDA15E;
+    display: flex;
+    justify-content: center;
+    padding: 2.5%;
+    background-color: #f3f2ea;
     min-height: 100px;
     width: 100%;
+    & form {
+        width: 75ch;
+    }
 }
 
+legend {
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.form-row { 
+    display: flex;
+    gap: 2rem;
+}
+
+.form-column {
+    width: 40%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+#footer {
+    margin-top: 2.5%;
+    width: 75ch;
+    & p {
+        font-size: 1.25rem;
+    }
+}
+
+button {
+    color: #FEFAE0;
+    border: 0px;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.button-container{
+    display: flex;
+    gap: 1.5rem;
+}
+
+#sign-up-btn {
+    background-color: #283618;
+    &:hover {
+        background-color: #606C38;
+    }
+}
+
+#github-btn {
+    background-color: #4f5257;
+    & img {
+        width: 25px;
+        margin-inline-end: 4px;
+    }
+    &:hover {
+        background-color: #606C38;
+    }
+}
+
+#log-in {
+    color: #606C38;
+    text-decoration: none;
+    font-weight: 900;
+    &:hover {
+        color: #283618;
+    }
+}

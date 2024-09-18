@@ -25,17 +25,53 @@
             <div id="description">
                 <h2>Join the 24 Bottles Family!</h2>
                 <p>Ready to elevate your events with exquisite catering that’s always a hit?</p>
-                <p>At 24 Bottles, we specialize in crafting unforgettable experiences with our diverse and delicious menu options.</p>
+                <p>At 24 Bottles, we specialize in crafting unforgettable experiences for weddings with our diverse and delicious menu options.</p>
                 <p>Sign up now to gain exclusive access to all of our services. </p>
-                <p>Don't miss out on the chance to make your next event truly special!</p>
             </div>
             <div id="form-container">
-                <form action="">
-                    
+                <form action="" method="get" class="sign-up-form">
+                    <legend>Don't miss out on the chance to make your next event truly special.</legend>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="first-name">First Name</label>
+                            <input id="first-name" name="first-name" type="text"/>
+                        </div>
+                        <div class="form-column">
+                            <label for="last-name">Last Name</label>
+                            <input id="last-name" name="last-name" type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email"/>
+                        </div>
+                        <div class="form-column">
+                            <label for="telephone">Phone Number</label>
+                            <input id="telephone" name="telephone" type="tel"/>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password"/>
+                        </div>
+                        <div class="form-column">
+                            <label for="password-repeat">Repeat Password</label>
+                            <input id="password-repeat" name="password" type="password"/>
+                        </div>
+                    </div>
                 </form>
             </div>
-            <button>Create Account</button>
-            <p>Already have an account? Log in</p>
+            <div id="footer">
+                <div class="button-container">
+                    <button id="sign-up-btn">Create Account</button>
+                    <button id="github-btn">
+                        <img src="images/github.svg" alt="Github icon">
+                        Detrett</button>
+                </div>
+                <p>Already have an account? <a id="log-in" href="#">Log in</a></p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
